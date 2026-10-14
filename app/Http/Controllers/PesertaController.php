@@ -70,7 +70,7 @@ class PesertaController extends Controller
             'jenis_kelamin' => 'required|in:L,P',
             'alamat' => 'required|string',
             'no_hp' => 'required|string|max:15',
-            'status_rekomendasi' => 'required|in:Kompeten,Belum Kompeten',
+            'status_rekomendasi' => 'required|in:Terdaftar,Kompeten,Belum Kompeten',
         ]);
 
         $peserta->update($request->all());

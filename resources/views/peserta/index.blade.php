@@ -43,16 +43,18 @@
                                 <td>{{ $item->skema->nm_skema ?? '-' }}</td>
                                 <td>{{ $item->no_hp }}</td>
                                 <td>
-                                    <span class="badge bg-{{ $item->status_rekomendasi == 'Kompeten' ? 'success' : 'danger' }}">
+                                    <span
+                                        class="badge bg-{{ $item->status_rekomendasi == 'Kompeten' ? 'success' : ($item->status_rekomendasi == 'Belum Kompeten' ? 'danger' : 'primary') }}">
                                         {{ $item->status_rekomendasi }}
                                     </span>
                                 </td>
                                 <td class="text-end pe-3">
                                     <a href="{{ route('peserta.show', $item->id) }}"
                                         class="btn btn-info btn-sm text-white">Detail</a>
-                                    <a href="{{ route('peserta.edit', $item->id) }}" class="btn btn-warning btn-sm">Ubah</a>
-                                    <form action="{{ route('peserta.destroy', $item->id) }}" method="POST" class="d-inline"
-                                        onsubmit="return confirm('Hapus data ini?')">
+                                    <a href="{{ route('peserta.edit', $item->id) }}"
+                                        class="btn btn-warning btn-sm">Ubah</a>
+                                    <form action="{{ route('peserta.destroy', $item->id) }}" method="POST"
+                                        class="d-inline" onsubmit="return confirm('Hapus data ini?')">
                                         @csrf @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
                                     </form>

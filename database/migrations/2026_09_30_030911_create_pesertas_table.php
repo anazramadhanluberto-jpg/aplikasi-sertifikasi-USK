@@ -16,7 +16,7 @@ return new class extends Migration
             $table->enum('jenis_kelamin', ['L', 'P']);
             $table->text('alamat');
             $table->string('no_hp');
-            $table->enum('status_rekomendasi', ['Kompeten', 'Belum Kompeten'])->default('Kompeten');
+            $table->enum('status_rekomendasi', ['Terdaftar', 'Kompeten', 'Belum Kompeten'])->default('Terdaftar');
             $table->timestamps();
         });
     }

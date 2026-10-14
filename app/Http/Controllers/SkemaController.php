@@ -31,7 +31,7 @@ class SkemaController extends Controller
         return redirect()->route('skema.index')->with('success', 'Skema berhasil ditambahkan.');
     }
 
-    public function show($id)
+    public function show(string $id)
     {
         $skema = Skema::with('pesertas')->findOrFail($id);
 

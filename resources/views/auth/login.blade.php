@@ -11,9 +11,19 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-4">
-                <div class="card shadow-sm border-0">
+                <div class="card shadow-sm border-0 rounded-4">
                     <div class="card-body p-4">
-                        <h5 class="card-title text-center mb-4 fw-bold">Login Admin</h5>
+
+                        <!-- Header dengan Tombol Kembali yang Rapi -->
+                        <div class="d-flex align-items-center mb-4">
+                            <a href="{{ url('/') }}"
+                                class="btn btn-light btn-sm rounded-circle d-flex align-items-center justify-content-center me-3"
+                                style="width: 36px; height: 36px;" title="Kembali ke Beranda">
+                                &larr;
+                            </a>
+                            <h5 class="card-title mb-0 fw-bold">Login</h5>
+                        </div>
+
                         @if ($errors->any())
                             <div class="alert alert-danger py-2">
                                 <ul class="mb-0 ps-3">
@@ -23,6 +33,7 @@
                                 </ul>
                             </div>
                         @endif
+
                         <form action="{{ route('login') }}" method="POST">
                             @csrf
                             <div class="mb-3">
@@ -34,8 +45,13 @@
                                 <label class="form-label">Password</label>
                                 <input type="password" name="password" class="form-control" required>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100 fw-bold">Masuk</button>
+                            <button type="submit" class="btn btn-primary w-100 fw-bold py-2">Masuk</button>
                         </form>
+
+                        <div class="mt-3 text-center text-muted" style="font-size: 0.9rem;">
+                            Belum memiliki akun? <a href="{{ route('register') }}"
+                                class="text-decoration-none fw-medium">Register di sini</a>
+                        </div>
                     </div>
                 </div>
             </div>

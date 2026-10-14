@@ -9,7 +9,10 @@ class Peserta extends Model
 {
     use HasFactory;
 
+    protected $table = 'pesertas';
+
     protected $fillable = [
+        'user_id',
         'skema_id',
         'nik',
         'nama_peserta',
@@ -19,7 +22,14 @@ class Peserta extends Model
         'status_rekomendasi'
     ];
 
-    public function skema() {
-        return $this->belongsTo(Skema::class);
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function skema()
+    {
+        return $this->belongsTo(Skema::class, 'skema_id');
     }
 }

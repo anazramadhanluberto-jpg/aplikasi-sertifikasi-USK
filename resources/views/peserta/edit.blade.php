@@ -50,6 +50,9 @@
                 <div class="mb-3">
                     <label class="form-label">Status Rekomendasi</label>
                     <select name="status_rekomendasi" class="form-select" required>
+                        <option value="Terdaftar"
+                            {{ old('status_rekomendasi', $peserta->status_rekomendasi) == 'Terdaftar' ? 'selected' : '' }}>
+                            Terdaftar</option>
                         <option value="Kompeten"
                             {{ old('status_rekomendasi', $peserta->status_rekomendasi) == 'Kompeten' ? 'selected' : '' }}>
                             Kompeten</option>

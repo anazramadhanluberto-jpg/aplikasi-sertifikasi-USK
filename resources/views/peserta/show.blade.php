@@ -36,7 +36,8 @@
                     <tr>
                         <th>Status Rekomendasi</th>
                         <td>:
-                            <span class="badge bg-{{ $peserta->status_rekomendasi == 'Kompeten' ? 'success' : 'danger' }}">
+                            <span
+                                class="badge bg-{{ $peserta->status_rekomendasi == 'Kompeten' ? 'success' : ($peserta->status_rekomendasi == 'Belum Kompeten' ? 'danger' : 'primary') }}">
                                 {{ $peserta->status_rekomendasi }}
                             </span>
                         </td>
