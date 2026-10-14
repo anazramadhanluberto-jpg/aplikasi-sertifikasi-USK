@@ -10,7 +10,6 @@
         <div class="bg-white p-4 rounded shadow mb-4">
             <p><strong>Kode Skema:</strong> {{ $skema->kd_skema }}</p>
             <p><strong>Jenis:</strong> {{ $skema->jenis }}</p>
-            <p><strong>Jumlah Unit:</strong> {{ $skema->jumlah_unit }} Unit</p>
             <p><strong>Total Peserta Terdaftar:</strong> {{ $skema->pesertas->count() }} Orang</p>
             <a href="{{ route('skema.index') }}" class="btn btn-secondary btn-sm">
                 Kembali

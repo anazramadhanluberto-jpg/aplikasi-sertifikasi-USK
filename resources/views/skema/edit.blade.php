@@ -22,9 +22,6 @@
                         class="form-control" value="{{ old('nm_skema', $skema->nm_skema) }}" required></div>
                 <div class="mb-3"><label class="form-label">Jenis Skema</label><input type="text" name="jenis"
                         class="form-control" value="{{ old('jenis', $skema->jenis) }}" required></div>
-                <div class="mb-3"><label class="form-label">Jumlah Unit</label><input type="number" name="jumlah_unit"
-                        class="form-control" value="{{ old('jumlah_unit', $skema->jumlah_unit) }}" required min="1">
-                </div>
                 <button type="submit" class="btn btn-primary">Perbarui</button>
                 <a href="{{ route('skema.index') }}" class="btn btn-secondary">Batal</a>
             </form>

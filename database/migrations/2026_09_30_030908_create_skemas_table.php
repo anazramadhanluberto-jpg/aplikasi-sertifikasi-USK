@@ -13,7 +13,6 @@ return new class extends Migration
             $table->string('kd_skema')->unique();
             $table->string('nm_skema');
             $table->string('jenis');
-            $table->integer('jumlah_unit');
             $table->timestamps();
         });
     }

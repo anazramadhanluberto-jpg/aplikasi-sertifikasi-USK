@@ -9,7 +9,7 @@ class Skema extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['kd_skema', 'nm_skema', 'jenis', 'jumlah_unit'];
+    protected $fillable = ['kd_skema', 'nm_skema', 'jenis'];
 
     public function pesertas() {
         return $this->hasMany(Peserta::class, 'skema_id');

@@ -14,7 +14,6 @@
                         <th>Kode Skema</th>
                         <th>Nama Skema</th>
                         <th>Jenis</th>
-                        <th>Jumlah Unit</th>
                         <th class="text-end pe-3">Aksi</th>
                     </tr>
                 </thead>
@@ -25,7 +24,6 @@
                             <td><code>{{ $item->kd_skema }}</code></td>
                             <td class="fw-medium">{{ $item->nm_skema }}</td>
                             <td>{{ $item->jenis }}</td>
-                            <td>{{ $item->jumlah_unit }} Unit</td>
                             <td class="text-end pe-3">
                                 <a href="{{ route('skema.show', $item->id) }}"
                                     class="btn btn-info btn-sm text-white">Detail</a>

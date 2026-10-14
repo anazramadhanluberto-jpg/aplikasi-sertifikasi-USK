@@ -24,7 +24,6 @@ class SkemaController extends Controller
             'kd_skema' => 'required|unique:skemas,kd_skema',
             'nm_skema' => 'required|string|max:255',
             'jenis' => 'required|string|max:255',
-            'jumlah_unit' => 'required|integer|min:1',
         ]);
 
         Skema::create($request->all());
