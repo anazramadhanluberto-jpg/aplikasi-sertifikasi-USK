@@ -48,7 +48,6 @@ class SkemaController extends Controller
             'kd_skema' => 'required|unique:skemas,kd_skema,' . $skema->id,
             'nm_skema' => 'required|string|max:255',
             'jenis' => 'required|string|max:255',
-            'jumlah_unit' => 'required|integer|min:1',
         ]);
 
         $skema->update($request->all());
